@@ -30,6 +30,10 @@ function c() {
 //     console.log(zz);
 // }
 
+setTimeout(() => {
+    console.log('inside timeout')
+}, 2000)
+
 fetch('https://jsonplaceholder.typicode.com/todos/1')
     .then(response => response.json())
     .then(json => console.log(json))
