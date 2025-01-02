@@ -12,3 +12,23 @@ async function loadUserAsync() {
     const data = await res.json();
     console.log(data);
 }
+
+//same as above using arrow function . we can use any of these
+const loadUserArrow = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    console.log(data);
+}
+
+// same thing as above method using try catch
+
+const loadUserTryCatch = async () => {
+    try {
+        const res = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await res.json();
+        console.log(data);
+    }
+    catch (error) {
+
+    }
+}
