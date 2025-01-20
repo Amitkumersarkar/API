@@ -8,6 +8,7 @@ const addProduct = () => {
     console.log(product, quantity);
     // call the display product here
     displayProduct(product, quantity);
+    saveProductToLocalStorage(product, quantity);
 
 }
 
@@ -32,4 +33,8 @@ const getStoredShoppingCart = () => {
 
 const saveProductToLocalStorage = (product, quantity) => {
 
+    const cart = getStoredShoppingCart();
+    cart[product] = quantity;
+    const cartStringified = JSON.stringify(cart);
+    console.log(cartStringified);
 }
