@@ -17,3 +17,19 @@ const displayProduct = (product, quantity) => {
     li.innerText = `${product} : ${quantity}`;
     ul.appendChild(li);
 }
+
+const getStoredShoppingCart = () => {
+    // create an empty object
+    let cart = {};
+
+    const storedCart = localStorage.getElementById('cart');
+
+    if (storedCart) {
+        cart = JSON.parse(storedCart);
+    }
+    return cart;
+}
+
+const saveProductToLocalStorage = (product, quantity) => {
+
+}
